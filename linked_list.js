@@ -31,7 +31,7 @@ SinglyLinkedList.prototype.push = function(node) {
 };
 
 SinglyLinkedList.prototype.pop = function() {
-  if(this._length === 0){
+  if(this.isEmpty()){
     return -1;
   }
   var node = this.head;
@@ -44,7 +44,7 @@ SinglyLinkedList.prototype.pop = function() {
 };
 
 SinglyLinkedList.prototype.top = function() {
-  if(this._length === 0){
+  if(this.isEmpty()){
     return -1;
   }
   return this.head;
@@ -103,7 +103,7 @@ SinglyLinkedList.prototype.peek = function() {
 // Function to add a node to the end of the linked list
 SinglyLinkedList.prototype.add = function(node) {
   var current = this.head;
-  if (this._length === 0){
+  if (this.isEmpty()){
     this.head = node;
   } else {
       while(current.next !== null){
@@ -128,6 +128,10 @@ SinglyLinkedList.prototype.deleteNode = function(node) {
       current = current.next;
     }
   }
+};
+
+SinglyLinkedList.prototype.isEmpty = function() {
+  return this._length === 0;
 };
 
 /**********************
@@ -176,4 +180,5 @@ while(ll._length > 0){
   console.log("*************************");
 }
 
+// Testing out stack functions
 
