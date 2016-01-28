@@ -16,17 +16,13 @@ Using JavaScript prototype pattern, I've created an implementation of a **Singly
   * peek
 
 ## How to Run (using a terminal node REPL)
-1. Clone repo by running:
+* Clone repo by running:
 ```
 $ git clone git@github.com:gittheking/linked_lists.git
 ```
-in your terminal.
-
-2. Navigate into the `linked_list` directory
-
-3. If you have Node installed on your machine you can run the `.js` file with 
+* Navigate into the `linked_list` directory
+* If you have Node installed on your machine you can run the `.js` file with 
 ```
 $ node linked_list.js
 ```
-
-4. Play with it and test your understanding of LL's. 
+* Play with it and test your understanding of LL's. 
