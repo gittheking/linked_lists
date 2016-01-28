@@ -43,6 +43,13 @@ SinglyLinkedList.prototype.pop = function() {
   return node;
 };
 
+SinglyLinkedList.prototype.top = function() {
+  if(this._length === 0){
+    return -1;
+  }
+  return this.head;
+};
+
 /***********************
 **  Queue Operations  **
 ***********************/
@@ -72,6 +79,21 @@ SinglyLinkedList.prototype.dequeue = function() {
   current.next = null;
   this._length--;
   return node;
+};
+
+SinglyLinkedList.prototype.peek = function() {
+  var current = this.head;
+  switch(this._length) {
+    case 0:
+      return -1;
+    case 1:
+      return current;
+    default:
+      while(current.next !== null) {
+        current = current.next;
+      }
+      return current;
+  }
 };
 
 /**************************
